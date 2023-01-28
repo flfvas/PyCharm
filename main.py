@@ -1,19 +1,40 @@
-# This is a sample Python script.
+import keyboard
+from PIL import ImageGrab
+import time
+import pyautogui
+import mouse
+from pynput.mouse import Listener
+from pynput.mouse import Button, Controller
+#import PYGLET
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+# 关键字 函数名(传递的参数):
+def screen():
+    #'''保存截图'''
+    print('代码执行到这里了')
+    #keyboard.wait(hotkey='ctrl+alt+a')
+    #print('我按了ctrl+alt+a键')
+    keyboard.wait(hotkey='enter')
+    print('我按了enter键')
+    #pyautogui.press('o', 'i')
+    #pyautogui.hotkey('c', 's', 'e')
+    # left click
+    #mouse.click('x')
+    #time.sleep(0.5)
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+
+    #mouse = Controller()
 
 
-print()
-print()
+    #mouse.click(Button.x1)     # 鼠标下侧键(靠近手腕和拱起方向); 后退返回
+    #time.sleep(1)
+    #mouse.click(Button.x2)      # 鼠标上侧键(靠近手指和线缆方向); 前进
+    #time.sleep(1)
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    #mouse.wheel(1)  # scroll up
+    pyautogui.scroll(500)
+    pyautogui.alert(text='提示信息', title='窗口标题', button='按钮标题')
+
+
+screen()
