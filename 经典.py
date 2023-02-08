@@ -13,17 +13,19 @@ def 按住放大():
     #pyautogui.scroll(100)
     #pyautogui.keyUp('ctrl')
     #pyautogui.keyUp('ctrl')
+    #pyautogui.keyUp('ctrl')
     pyautogui.alert('这个消息弹窗是文字+OK按钮')
-    pyautogui.hotkey('ctrl', 'v')  # 粘贴
-    mouse.wheel(1)  # scroll down
+    #pyautogui.hotkey('ctrl', 'v')  # 粘贴
+    #mouse.wheel(1)  # scroll down
 
 # 定义函数
-def 快捷键():
-    按住放大()
+def globalhotkey_0_0():
+    按住放大
 
 
 # 定义快捷键
 # with keyboard.GlobalHotKeys({'<ctrl>+k':on_activate_p_0_0}) as h:
 # with keyboard.GlobalHotKeys({'你定义是快捷键':激活的函数不带括号}) as h:
-with keyboard.GlobalHotKeys({'<ctrl>+k': 快捷键}) as h:
+with keyboard.GlobalHotKeys({'<ctrl>+d': globalhotkey_0_0}) as h:
     h.join()
+# stContent.bind('<Control-MouseWheel>', onMouseWheel)
